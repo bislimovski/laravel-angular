@@ -1,0 +1,24 @@
+{
+  "name": "laravel-angular",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ivan Bislimovski"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/bislimovski/laravel-angular",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.0",
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-cookies": "^1.5.0"
+  }
+}
