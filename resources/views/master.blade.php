@@ -6,7 +6,7 @@
     <script>var baseUrl="{{url('/')}}/";</script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" ng-controller="globalController">
         <!--You must declare ng-view in order the routes to take efect -->
         <div ng-view></div>
     </div>

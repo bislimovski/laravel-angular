@@ -10,11 +10,12 @@ mainApp.controller('userController', ['$scope', '$http', '$location', 'userModel
 			userModel.getLogin(auth).then(function(){
 				$location.path('/dashboard');
 			});
-		},
-		doLogout: function() {
-			userModel.getLogout();
-			$location.path('/');
 		}
+		//move doLogout() inside menu, navController
+		//doLogout: function() {
+		//	userModel.getLogout();
+		//	$location.path('/');
+		//}
 
 	});
 

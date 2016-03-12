@@ -15,7 +15,7 @@ elixir(function(mix) {
     mix.sass('app.scss');
 
     mix.scripts(['app.js'], 'public/js/app.js');
-    mix.scripts(['controllers/userController.js'], 'public/js/controllers.js');
+    mix.scripts(['controllers/userController.js', 'controllers/globalController.js', 'controllers/navController.js'], 'public/js/controllers.js');
     mix.scripts(['models/userModel.js'], 'public/js/models.js');
 
     /*it's appending string to a file, called Hashing or Versioning*/
