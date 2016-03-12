@@ -10,15 +10,41 @@ mainApp.config(['$routeProvider', '$locationProvider',
 
         $routeProvider.when('/dashboard', {
             templateUrl: 'templates/users/dashboard.html',
-            controller: 'userController'
+            controller: 'userController',
+            authenticated: true
         });
 
         $routeProvider.when('/logout', {
     		templateUrl: 'templates/users/logout.html',
-            controller: 'userController'
+            controller: 'userController',
+            authenticated: true
         });
 
         $routeProvider.otherwise('/');
     }
 ]);
+//using $cookies
+mainApp.run(['$rootScope', '$location', 'userModel', function($rootScope, $location, userModel){
+
+    //if route is change trigger this code!!!
+    $rootScope.$on('$routeChangeStart', function(event, next, current){
+
+        //if route have element authenticated: true
+        if(next.$$route.authenticated){
+            //if user don't have $cookies, return to login page
+            if(!userModel.getAuthStatus()){
+                $location.path('/');
+            }
+        }
+
+        //originalPath is build in;
+        //if user is logged in, and want to go to login page, redirect to the current page
+        if(next.$$route.originalPath == '/'){
+            if(userModel.getAuthStatus()){
+                $location.path(current.$$route.originalPath);
+            }
+        }
+
+    });
+}]);
 

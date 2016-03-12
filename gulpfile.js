@@ -15,10 +15,10 @@ elixir(function(mix) {
     mix.sass('app.scss');
 
     mix.scripts(['app.js'], 'public/js/app.js');
-    mix.scripts(['controllers/userController.js', 'controllers/globalController.js'], 'public/js/controllers.js');
-    mix.scripts(['factories/authFactory.js'], 'public/js/factories.js');
+    mix.scripts(['controllers/userController.js'], 'public/js/controllers.js');
+    mix.scripts(['models/userModel.js'], 'public/js/models.js');
 
     /*it's appending string to a file, called Hashing or Versioning*/
-    mix.version(['js/all.js', 'js/controllers.js', 'js/factories.js']);
+    mix.version(['js/app.js', 'js/controllers.js', 'js/models.js']);
 
 });

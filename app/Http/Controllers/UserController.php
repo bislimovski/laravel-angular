@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facade\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -18,6 +19,7 @@ class UserController extends Controller
             'email' => $request->input('email'),
             'password' => $request->input('password')
         ];
+//        dd(Auth::attempt($credentials)); //true
 
         //attempt($array) returns if credentials exist in database
         if(! Auth::attempt($credentials))
@@ -35,7 +37,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return User::all();
     }
 
     /**

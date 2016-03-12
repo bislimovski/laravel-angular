@@ -17,6 +17,7 @@
     <script type="text/javascript" src="{{asset('bower_components/angular-cookies/angular-cookies.min.js')}}"></script>
 
     <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/models.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/controllers.js')}}"></script>
 
 </body>
