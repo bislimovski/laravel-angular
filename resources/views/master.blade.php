@@ -3,11 +3,12 @@
 <head>
     <title>Gallery application in Angular JS</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <script>var baseUrl="{{url('/')}}/";</script>
 </head>
 <body>
     <div class="container" ng-controller="globalController">
-        <!--You must declare ng-view in order the routes to take efect -->
+        <!--You must declare ng-view in order the routes to take effect -->
         <div ng-view></div>
     </div>
     <script type="text/javascript" src="{{asset('bower_components/jquery/dist/jquery.min.js')}}"></script>

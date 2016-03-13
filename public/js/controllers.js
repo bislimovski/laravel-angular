@@ -85,6 +85,11 @@ mainApp.controller('navController', ['$scope', 'userModel', '$location', functio
         doLogout: function() {
             userModel.getLogout();
             $location.path('/');
+        },
+        checkActiveLink: function(routeLink) {
+            if($location.path() == routeLink){
+                return 'make-active';
+            }
         }
     });
 }]);
