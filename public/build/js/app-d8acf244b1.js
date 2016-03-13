@@ -22,13 +22,13 @@ mainApp.config(['$routeProvider', '$locationProvider',
 
         $routeProvider.when('/gallery/view', {
             templateUrl: 'templates/gallery/gallery-view.html',
-            controller: 'userController',
+            controller: 'galleryController',
             authenticated: true
         });
 
         $routeProvider.when('/gallery/add', {
             templateUrl: 'templates/gallery/gallery-add.html',
-            controller: 'userController',
+            controller: 'galleryController',
             authenticated: true
         });
 

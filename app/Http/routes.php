@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::post('auth', 'UserController@checkAuth');
 Route::resource('users', 'UserController');
+Route::resource('gallery', 'GalleryController');

@@ -46,4 +46,20 @@ mainApp.factory('userModel', ['$http', '$cookies', function($http, $cookies){
     return userModel;
 }]);
 
+mainApp.factory('galleryModel', ['$http', function($http) {
+    return {
+        saveGallery: function(galleryData){
+            return $http({
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                url: baseUrl + 'gallery',
+                method: "POST",
+                data: {
+                    name: galleryData.name
+                }
+            });
+        }
+    }
+}]);
 //# sourceMappingURL=models.js.map
