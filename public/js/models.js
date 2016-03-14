@@ -59,6 +59,9 @@ mainApp.factory('galleryModel', ['$http', function($http) {
                     name: galleryData.name
                 }
             });
+        },
+        getAllGalleries: function(){
+            return $http.get(baseUrl + 'gallery');
         }
     }
 }]);

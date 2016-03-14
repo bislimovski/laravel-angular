@@ -93,7 +93,19 @@ mainApp.controller('navController', ['$scope', 'userModel', '$location', functio
         }
     });
 }]);
-mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', function($scope, $location, galleryModel) {
+mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', '$timeout', function($scope, $location, galleryModel, $timeout) {
+
+    //get all galleries when page is loaded
+    galleryModel.getAllGalleries().success(function(response){
+        //without timeout
+        //$scope.galleries = response;
+        //$scope.showGalleries = true;
+        $timeout(function(){
+            $scope.galleries = response;
+            $scope.showGalleries = true;
+        }, 1000);
+    });
+
     //vars
     angular.extend($scope, {
         newGallery: {},

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class GalleryController extends Controller
@@ -18,7 +19,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        //user will see only own galleries
+        return Gallery::with('user')->get();
+        return Gallery::where('user_id', Auth::user()->id)->with('user')->get();
     }
 
     /**
