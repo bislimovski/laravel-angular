@@ -1,3 +1,7 @@
 .navbar .make-active {
   font-weight: bold;
 }
+
+.gallery-container {
+  cursor: pointer;
+}

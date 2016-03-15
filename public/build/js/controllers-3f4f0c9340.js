@@ -93,7 +93,7 @@ mainApp.controller('navController', ['$scope', 'userModel', '$location', functio
         }
     });
 }]);
-mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', '$timeout', function($scope, $location, galleryModel, $timeout) {
+mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', '$timeout', '$routeParams', function($scope, $location, galleryModel, $timeout, $routeParams) {
 
     //get all galleries when page is loaded
     galleryModel.getAllGalleries().success(function(response){
@@ -105,6 +105,15 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
             $scope.showGalleries = true;
         }, 1000);
     });
+
+    //single page gallery
+    console.log($routeParams.id);
+    if($routeParams.id){
+        galleryModel.getGalleryById($routeParams.id).success(function(response){
+            $scope.singleGallery = response;
+            console.log(response);
+        });
+    }
 
     //vars
     angular.extend($scope, {
@@ -128,7 +137,10 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
                //console.log('Error');
                $scope.formSubmitted = true;
            }
-       }
+       },
+        viewGallery: function(id){
+            $location.path('/gallery/view/' + id);
+        }
     });
 }]);
 //# sourceMappingURL=controllers.js.map
