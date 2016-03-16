@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\Validator;
 
 class GalleryController extends Controller
 {
+
+    public function test()
+    {
+        return 'Running test from test()';
+    }
+
     /**
      * Display a listing of the resource.
      *
