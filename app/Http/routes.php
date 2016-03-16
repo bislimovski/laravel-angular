@@ -22,14 +22,16 @@ Route::post('auth', 'UserController@checkAuth');
 Route::resource('users', 'UserController');
 Route::resource('gallery', 'GalleryController');
 
-//route for uploading files using dropzone
-Route::post('upload-file', function(Request $request){
-   return response($request->all(), 201);
-});
+Route::post('upload-file', 'GalleryController@uploadImage');
 
-//storage local test route
-Route::get('test', function(){
-   $local = Storage::disk('local');
-    //the file is created in storage/app directory
-   $local->put('test.txt', 'Sample text inside test file');
-});
+////TEST-route for uploading files using dropzone
+//Route::post('upload-file', function(Request $request){
+//   return response($request->all(), 201);
+//});
+
+////TEST-storage local test route
+//Route::get('test', function(){
+//   $local = Storage::disk('local');
+//    //the file is created in storage/app directory
+//   $local->put('test.txt', 'Sample text inside test file');
+//});
