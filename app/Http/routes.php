@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 Route::get('/', function () {
     return view('master');
@@ -20,6 +21,15 @@ Route::get('/', function () {
 Route::post('auth', 'UserController@checkAuth');
 Route::resource('users', 'UserController');
 Route::resource('gallery', 'GalleryController');
+
+//route for uploading files using dropzone
 Route::post('upload-file', function(Request $request){
    return response($request->all(), 201);
+});
+
+//storage local test route
+Route::get('test', function(){
+   $local = Storage::disk('local');
+    //the file is created in storage/app directory
+   $local->put('test.txt', 'Sample text inside test file');
 });
