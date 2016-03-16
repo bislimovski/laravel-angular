@@ -24,7 +24,27 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
     angular.extend($scope, {
         newGallery: {},
         errorDiv: false,
-        errorMessages: []
+        errorMessages: [],
+        singleGallery: {},
+        dropzoneConfig: {
+            'options': { // passed into the Dropzone constructor
+                'url': baseUrl + 'upload-file'
+            },
+            'eventHandlers': {
+                'sending': function (file, xhr, formData) {
+                    //sending the response, file and galleryId
+                    console.log('Sending');
+                    formData.append('galleryId',$routeParams.id);
+                    //if you are using csrfToken
+                    //formData.append('_token', csrfToken);
+                },
+                'success': function (file, response) {
+                    //response is printed when post method is successful
+                    console.log('Success');
+                    console.log(response);
+                }
+            }
+        }
     });
 
     //functions
