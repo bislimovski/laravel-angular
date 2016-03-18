@@ -24,6 +24,9 @@ Route::resource('gallery', 'GalleryController');
 
 Route::post('upload-file', 'GalleryController@uploadImage');
 
+
+
+/****************Refactoring****************************************/
 ////TEST-route for uploading files using dropzone
 //Route::post('upload-file', function(Request $request){
 //   return response($request->all(), 201);

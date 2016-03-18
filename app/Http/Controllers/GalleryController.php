@@ -114,7 +114,7 @@ class GalleryController extends Controller
 
     public function uploadImage(Request $request)
     {
-        $galleryId = $request->input('galleryId');
+//        $galleryId = $request->input('galleryId');
 
         if(! $request->hasFile('file')) {
             return response('No file sent', 400);
@@ -133,31 +133,36 @@ class GalleryController extends Controller
             return response('The validation is not valid', 400);
         }
 
-        $mimeType = $request->file('file')->getClientMimeType();
-        $fileSize = $request->file('file')->getClientSize();
-        $fileName = 'gallery_'. $galleryId . '_' . uniqid(). '.' .$request->file('file')->getClientOriginalExtension();
+        //StoreFile can be added to the __construct()
+        $storeFile = new StoreFile();
+        return $storeFile->uploadThumbAndMainImage($request);
 
-        $local = Storage::disk('local');
-        $file = null;
-        if($local->put($fileName, file_get_contents($request->file('file')))){
-            $file = StoreFile::create([
-                'file_name' => $fileName,
-                'mime_type' => $mimeType,
-                'file_size' => $fileSize,
-                'file_path' => 'http://localhost:8000/img/'. $fileName,
-                'storage_type'  => 'local'
-            ]);
-
-            DB::table('gallery_images')->insert([
-                'gallery_id' => $galleryId,
-                'file_id' => $file->id
-            ]);
-
-            $fileImg = StoreFile::find($file->id);
-            $fileImg->status = 1;
-            $fileImg->save();
-        }
-
-        return response($file, 201);
+/************Before Refactoring*****************************************/
+//        $mimeType = $request->file('file')->getClientMimeType();
+//        $fileSize = $request->file('file')->getClientSize();
+//        $fileName = 'gallery_'. $galleryId . '_' . uniqid(). '.' .$request->file('file')->getClientOriginalExtension();
+//
+//        $local = Storage::disk('local');
+//        $file = null;
+//        if($local->put($fileName, file_get_contents($request->file('file')))){
+//            $file = StoreFile::create([
+//                'file_name' => $fileName,
+//                'mime_type' => $mimeType,
+//                'file_size' => $fileSize,
+//                'file_path' => 'http://localhost:8000/img/'. $fileName,
+//                'storage_type'  => 'local'
+//            ]);
+//
+//            DB::table('gallery_images')->insert([
+//                'gallery_id' => $galleryId,
+//                'file_id' => $file->id
+//            ]);
+//
+//            $fileImg = StoreFile::find($file->id);
+//            $fileImg->status = 1;
+//            $fileImg->save();
+//        }
+//
+//        return response($file, 201);
     }
 }
