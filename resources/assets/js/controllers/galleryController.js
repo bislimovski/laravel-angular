@@ -1,4 +1,5 @@
-mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', '$timeout', '$routeParams', function($scope, $location, galleryModel, $timeout, $routeParams) {
+mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', '$timeout', '$routeParams', 'Lightbox',
+    function($scope, $location, galleryModel, $timeout, $routeParams, Lightbox) {
 
     //get all galleries when page is loaded
     galleryModel.getAllGalleries().success(function(response){
@@ -65,6 +66,10 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
        },
         viewGallery: function(id){
             $location.path('/gallery/view/' + id);
+        },
+        openLightboxModal: function (index) {
+            console.log($scope.singleGallery.images);
+            Lightbox.openModal($scope.singleGallery.images, index);
         }
     });
 }]);

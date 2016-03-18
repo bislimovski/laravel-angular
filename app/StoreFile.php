@@ -19,7 +19,7 @@ class StoreFile extends Model
         $galleryId = $request->input('galleryId');
 
         $extension = $request->file('file')->guessExtension();
-        $fileName = uniqid() .'.'. $extension;
+        $fileName = 'gallery_'. $galleryId . '_' .uniqid() .'.'. $extension;
         $mimeType = $request->file('file')->getClientMimeType();
         $fileSize = $request->file('file')->getClientSize();
 
@@ -35,7 +35,7 @@ class StoreFile extends Model
         $imageThumb->encode($extension);
 
         $local = Storage::disk('local');
-        $local->put('gallery_'. $galleryId . '_' .$fileName, (string)$imageThumb);
+        $local->put($fileName, (string)$imageThumb);
 
         $file = StoreFile::create([
                 'file_name' => $fileName,

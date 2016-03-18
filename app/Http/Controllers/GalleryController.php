@@ -75,7 +75,10 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        return Gallery::with('user')->where('id', $id)->first();
+        $galleryObject = new Gallery();
+        return $galleryObject->getSingleGallery($id);
+
+//        return Gallery::with('user')->where('id', $id)->first();
     }
 
     /**

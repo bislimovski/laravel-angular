@@ -1,4 +1,4 @@
-var mainApp = angular.module('mainApp', ['ngRoute', 'ngCookies']);
+var mainApp = angular.module('mainApp', ['ngRoute', 'ngCookies', 'bootstrapLightbox', 'ui.bootstrap', 'angular-loading-bar']);
 
 mainApp.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
@@ -83,6 +83,4 @@ mainApp.directive('dropzone', function(){
         });
     };
 });
-
-
 //# sourceMappingURL=app.js.map

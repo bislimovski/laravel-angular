@@ -4,6 +4,7 @@ namespace App;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Gallery extends Model
 {
@@ -20,7 +21,36 @@ class Gallery extends Model
     }
 
     //add user relationship using with(), inside gallery
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo('App\User');
     }
+
+    public function getSingleGallery($id)
+    {
+        $gallery = Gallery::with('user')->where('id', $id)->first();
+        //add new object element - images, same as adding element in the array :)
+        $gallery->images = $this->getGalleryImageUrls($id);
+
+        return $gallery;
+    }
+
+    public function getGalleryImageUrls($id)
+    {
+        $files = DB::table('gallery_images')
+            ->where('gallery_id', $id)
+            ->join('store_file', 'store_file.id', '=', 'gallery_images.file_id')
+            ->get();
+
+        $finalData = [];
+        foreach($files as $key => $image){
+            $finalData[$key] = [
+                'url' => 'img/'. $image->file_name,
+                'thumbUrl' => $image->file_path
+            ];
+        }
+
+        return $finalData;
+    }
+
 }
