@@ -21,6 +21,11 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
         });
     }
 
+        $scope.$on('imageAdded', function(event, args){
+            $scope.singleGallery = args;
+            $scope.$apply();
+        });
+
     //vars
     angular.extend($scope, {
         newGallery: {},
@@ -41,8 +46,10 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
                 },
                 'success': function (file, response) {
                     //response is printed when post method is successful
-                    console.log('Success');
                     console.log(response);
+                    //add image on the immediately to the screen, when image is upload
+                    $scope.singleGallery.images.push(response);
+                    $scope.$emit('imageAdded', $scope.singleGallery);
                 }
             }
         }
