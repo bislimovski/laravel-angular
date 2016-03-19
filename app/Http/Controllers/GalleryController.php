@@ -110,9 +110,32 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $imageId = $request->input('id');
+        $galleryId = $request->input('galleryId');
+
+        try{
+            DB::beginTransaction();
+
+            //delete image from StoreFile
+            $file = StoreFile::findOrFail($imageId);
+            $file->delete();
+
+            //delete image from relation table 'gallery_images'
+            DB::table('gallery_images')->where('file_id', $file->id)->delete();
+
+            //delete from local storage
+            $local = Storage::disk('local');
+            $local->delete($file->file_name);
+
+            DB::commit();
+        } catch(\PDOException $e){
+            DB::rollBack();
+        }
+        return response($this->show($galleryId), 200);
+        //if I return 204, the images are hidden when I try to delete some image
+//        return response($this->show($galleryId), 204);
     }
 
     public function uploadImage(Request $request)

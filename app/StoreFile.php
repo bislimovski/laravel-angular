@@ -56,6 +56,7 @@ class StoreFile extends Model
 
         return [
             'file' => $file,
+            'file_id' => $file->id,
             'url' => 'img/'. $fileName,
             'thumbUrl' => 'http://localhost:8000/img/'. $fileName,
         ];

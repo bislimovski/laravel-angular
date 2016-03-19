@@ -10,3 +10,17 @@
   cursor: pointer;
 }
 
+.gallery-image-single {
+  position: relative;
+  .delete-icon {
+    position: absolute;
+    bottom: 30px;
+    right: 40%;
+    display: none;
+  }
+  &:hover {
+    .delete-icon {
+      display: block;
+    }
+  }
+}

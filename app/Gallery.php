@@ -45,6 +45,7 @@ class Gallery extends Model
         $finalData = [];
         foreach($files as $key => $image){
             $finalData[$key] = [
+                'file_id' => $image->id,
                 'url' => 'img/'. $image->file_name,
                 'thumbUrl' => $image->file_path
             ];

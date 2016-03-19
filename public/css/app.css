@@ -5,3 +5,18 @@
 .gallery-container {
   cursor: pointer;
 }
+
+.gallery-image-single {
+  position: relative;
+}
+
+.gallery-image-single .delete-icon {
+  position: absolute;
+  bottom: 30px;
+  right: 40%;
+  display: none;
+}
+
+.gallery-image-single:hover .delete-icon {
+  display: block;
+}

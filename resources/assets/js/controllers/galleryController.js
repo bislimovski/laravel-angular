@@ -47,7 +47,7 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
                 'success': function (file, response) {
                     //response is printed when post method is successful
                     console.log(response);
-                    //add image on the immediately to the screen, when image is upload
+                    //add image immediately to the screen, when image is upload
                     $scope.singleGallery.images.push(response);
                     $scope.$emit('imageAdded', $scope.singleGallery);
                 }
@@ -74,9 +74,20 @@ mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', 
         viewGallery: function(id){
             $location.path('/gallery/view/' + id);
         },
+        //lightbox
         openLightboxModal: function (index) {
             console.log($scope.singleGallery.images);
             Lightbox.openModal($scope.singleGallery.images, index);
+        },
+        deleteImage: function(imageId) {
+            console.log(imageId);
+            var data = {
+                imageId: imageId,
+                galleryId: $routeParams.id
+            };
+            galleryModel.deleteSingleImage(data).success(function(response){
+                $scope.singleGallery = response;
+            });
         }
     });
 }]);
