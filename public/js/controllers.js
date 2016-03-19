@@ -93,28 +93,45 @@ mainApp.controller('navController', ['$scope', 'userModel', '$location', functio
         }
     });
 }]);
-mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', '$timeout', '$routeParams', 'Lightbox',
-    function($scope, $location, galleryModel, $timeout, $routeParams, Lightbox) {
+mainApp.controller('galleryController', ['$scope', '$location', 'galleryModel', '$timeout', '$routeParams', 'Lightbox', 'galleryData',
+    function($scope, $location, galleryModel, $timeout, $routeParams, Lightbox, galleryData) {
 
-    //get all galleries when page is loaded
-    galleryModel.getAllGalleries().success(function(response){
-        //without timeout
-        //$scope.galleries = response;
-        //$scope.showGalleries = true;
-        $timeout(function(){
-            $scope.galleries = response;
-            $scope.showGalleries = true;
-        }, 1000);
-    });
+    ////get all galleries when page is loaded
+    //galleryModel.getAllGalleries().success(function(response){
+    //    //without timeout
+    //    //$scope.galleries = response;
+    //    //$scope.showGalleries = true;
+    //    $timeout(function(){
+    //        $scope.galleries = response;
+    //        $scope.showGalleries = true;
+    //    }, 1000);
+    //});
 
-    //single page gallery
-    console.log($routeParams.id);
-    if($routeParams.id){
-        galleryModel.getGalleryById($routeParams.id).success(function(response){
-            $scope.singleGallery = response;
-            console.log(response);
-        });
-    }
+        //refactored code, get all galleries when page is loaded
+        if(galleryData && galleryData.galleries != undefined){
+            galleryData.galleries.success(function(response){
+                $timeout(function(){
+                    $scope.galleries = response;
+                    $scope.showGalleries = true;
+                }, 1000);
+            });
+        }
+
+    ////single page gallery
+    //console.log($routeParams.id);
+    //if($routeParams.id){
+    //    galleryModel.getGalleryById($routeParams.id).success(function(response){
+    //        $scope.singleGallery = response;
+    //        console.log(response);
+    //    });
+    //}
+
+        //refactored code, single page gallery
+        if(galleryData && galleryData.singleGallery != undefined){
+            galleryData.singleGallery.success(function(response){
+                $scope.singleGallery = response;
+            });
+        }
 
         $scope.$on('imageAdded', function(event, args){
             $scope.singleGallery = args;

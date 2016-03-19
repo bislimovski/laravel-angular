@@ -23,19 +23,40 @@ mainApp.config(['$routeProvider', '$locationProvider',
         $routeProvider.when('/gallery/add', {
             templateUrl: 'templates/gallery/gallery-add.html',
             controller: 'galleryController',
-            authenticated: true
+            authenticated: true,
+            //I use same controller in all 3 routes, so I need to add resolve method in all 3 routes
+            resolve: {
+                galleryData: function(){
+                    return 'add';
+                }
+            }
         });
 
         $routeProvider.when('/gallery/view', {
             templateUrl: 'templates/gallery/gallery-view.html',
             controller: 'galleryController',
-            authenticated: true
+            authenticated: true,
+            resolve: {
+                galleryData: function(galleryModel){
+                    return {
+                        //refactoring code
+                        galleries: galleryModel.getAllGalleries()
+                    };
+                }
+            }
         });
 
         $routeProvider.when('/gallery/view/:id', {
             templateUrl: 'templates/gallery/gallery-single.html',
             controller: 'galleryController',
-            authenticated: true
+            authenticated: true,
+            resolve: {
+                galleryData: function(galleryModel, $route){
+                    return {
+                        singleGallery: galleryModel.getGalleryById($route.current.params.id)
+                    };
+                }
+            }
         });
 
         $routeProvider.otherwise('/');

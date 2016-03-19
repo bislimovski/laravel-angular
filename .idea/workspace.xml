@@ -30,33 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Inspire.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Console/Commands/Inspire.php">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70857143">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="37" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseBackup.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/Commands/DatabaseBackup.php">
+      <file leaf-file-name="galleryController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/galleryController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4615386">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-              <folding>
-                <element signature="e#40#58#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.0">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.907441">
+              <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -100,7 +88,6 @@
         <option value="$PROJECT_DIR$/tests/TestCase.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/master.blade.php" />
         <option value="$PROJECT_DIR$/public/templates/gallery/gallery-single.html" />
@@ -108,10 +95,11 @@
         <option value="$PROJECT_DIR$/app/StoreFile.php" />
         <option value="$PROJECT_DIR$/app/Gallery.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/models/galleryModel.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/galleryController.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/GalleryController.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/DatabaseBackup.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/galleryController.js" />
       </list>
     </option>
   </component>
@@ -276,7 +264,7 @@
     <property name="FullScreen" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.phpunit" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="En&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/.env&#10;galleryM&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/assets/js/models/galleryModel.js&#10;Gallery&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Gallery.php&#10;master&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/views/master.blade.php&#10;galle&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-single.html&#10;gallery&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Gallery.php&#10;galleryCon&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;galleryC&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/assets/js/controllers/galleryController.js&#10;single&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-single.html&#10;galleryCont&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/assets/js/controllers/galleryController.js&#10;Store&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/StoreFile.php&#10;controller&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;routes&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/routes.php&#10;galleryS&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-single.html&#10;galleryContro&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;gallery-&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-view.html&#10;GalleryC&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;User&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/User.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/routes.php&#10;userC&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/UserController.php" />
+    <property name="SearchEverywhereHistoryKey" value="galleryC&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/assets/js/controllers/galleryController.js&#10;app&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/assets/js/app.js&#10;En&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/.env&#10;galleryM&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/assets/js/models/galleryModel.js&#10;Gallery&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Gallery.php&#10;master&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/views/master.blade.php&#10;galle&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-single.html&#10;gallery&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Gallery.php&#10;galleryCon&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;single&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-single.html&#10;galleryCont&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/resources/assets/js/controllers/galleryController.js&#10;Store&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/StoreFile.php&#10;controller&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;routes&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/routes.php&#10;galleryS&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-single.html&#10;galleryContro&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;gallery-&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/public/templates/gallery/gallery-view.html&#10;GalleryC&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/GalleryController.php&#10;User&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/User.php&#10;route&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/routes.php&#10;userC&#9;FILE&#9;file://C:/xampp/htdocs/laravel-angular/app/Http/Controllers/UserController.php" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -341,7 +329,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1448" height="880" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20972222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -352,7 +340,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26496816" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26496816" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -664,22 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37023592">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/galleryController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72232306">
-          <caret line="87" column="76" selection-start-line="87" selection-start-column="76" selection-end-line="87" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/models/galleryModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64791286">
@@ -719,25 +691,7 @@
         <state vertical-scroll-proportion="0.5790476">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.0">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/DatabaseBackup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4615386">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
+            <element signature="e#23#62#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -754,6 +708,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70857143">
           <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/DatabaseBackup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17142858">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6438095">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="37" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/galleryController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.907441">
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
           <folding />
         </state>
       </provider>
